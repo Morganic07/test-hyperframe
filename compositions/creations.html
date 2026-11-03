@@ -27,11 +27,16 @@
       height: 3px;
       background: #ffb703;
     }
-    .crea-full {
+    .crea-frame {
       position: absolute;
-      inset: 0;
+      left: 96px;
+      top: 220px;
+      width: 700px;
+      height: 394px;
       overflow: hidden;
-      background: #050505;
+      border: 1px solid #ffb703;
+      border-radius: 16px;
+      background: #060010;
     }
     .crea-shot {
       width: 100%;
@@ -41,29 +46,33 @@
     #crea-img2 {
       object-fit: contain;
     }
-    .crea-label {
+    .crea-caption {
       position: absolute;
       left: 96px;
-      bottom: 84px;
-      padding: 16px 28px;
-      border-left: 3px solid #ffb703;
-      background: rgba(6, 0, 16, 0.85);
+      top: 640px;
+      width: 700px;
       font-family: "JetBrains Mono", monospace;
-      font-size: 40px;
-      font-weight: 500;
       color: #ffffff;
+    }
+    .crea-name {
+      display: block;
+      font-size: 44px;
+      font-weight: 500;
+    }
+    .crea-role {
+      display: block;
+      margin-top: 8px;
+      font-size: 30px;
+      line-height: 1.3;
+      color: #d1d5db;
     }
   </style>
   <div data-hf-id="hf-exi7" id="root" data-composition-id="creations" data-width="1920" data-height="1080">
     <div data-hf-id="hf-2z85" id="crea-heading"><span data-hf-id="hf-p9c6" id="crea-rule"></span><span data-hf-id="hf-gtqc" id="crea-title">CRÉATIONS VISUELLES ET 3D</span></div>
-    <div data-hf-id="hf-5pud" id="crea-full1" class="crea-full">
-      <img data-hf-id="hf-7qwe" id="crea-img1" class="crea-shot" src="assets/projets/Doomed.webp" alt="A Space Odyssey" />
-      <div data-hf-id="hf-q0iq" class="crea-label">A Space Odyssey, animation 3D</div>
-    </div>
-    <div data-hf-id="hf-9nye" id="crea-full2" class="crea-full">
-      <img data-hf-id="hf-bigw" id="crea-img2" class="crea-shot" src="assets/projets/Morgaris.webp" alt="Police Morgaris" />
-      <div data-hf-id="hf-4kp6" class="crea-label">Morgaris, ma police d'écriture</div>
-    </div>
+    <div data-hf-id="hf-5pud" id="crea-frame1" class="crea-frame"><img data-hf-id="hf-7qwe" id="crea-img1" class="crea-shot" src="assets/projets/Doomed.webp" alt="A Space Odyssey" /></div>
+    <div data-hf-id="hf-9nye" id="crea-frame2" class="crea-frame"><img data-hf-id="hf-bigw" id="crea-img2" class="crea-shot" src="assets/projets/Morgaris.webp" alt="Police Morgaris" /></div>
+    <div data-hf-id="hf-q0iq" id="crea-cap1" class="crea-caption"><span class="crea-name">A Space Odyssey</span><span class="crea-role">Animation 3D</span></div>
+    <div data-hf-id="hf-4kp6" id="crea-cap2" class="crea-caption"><span class="crea-name">Morgaris</span><span class="crea-role">Ma police d'écriture</span></div>
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
@@ -79,14 +88,27 @@
       { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "steps(25)" },
       0.1,
     );
-    gsap.set("#crea-full1, #crea-full2", { opacity: 0 });
-    tl.set("#crea-heading", { opacity: 0 }, 1.25);
-    tl.set("#crea-full1", { opacity: 1 }, 1.25);
-    tl.fromTo("#crea-img1", { scale: 1.06 }, { scale: 1, duration: 0.6, ease: "expo.out" }, 1.25);
-    tl.set("#crea-full1", { opacity: 0 }, 2.85);
-    tl.set("#crea-full2", { opacity: 1 }, 2.85);
-    tl.fromTo("#crea-img2", { scale: 1.06 }, { scale: 1, duration: 0.6, ease: "expo.out" }, 2.85);
-    tl.to("#crea-full2", { opacity: 0, filter: "blur(10px)", duration: 0.2, ease: "power2.in" }, 4.25);
+    gsap.set("#crea-frame2, #crea-cap1, #crea-cap2", { opacity: 0 });
+    tl.fromTo(
+      "#crea-frame1",
+      { clipPath: "inset(0 100% 0 0 round 16px)" },
+      { clipPath: "inset(0 0% 0 0 round 16px)", duration: 0.5, ease: "power3.inOut" },
+      0.35,
+    );
+    tl.set("#crea-cap1", { opacity: 1 }, 0.6);
+    tl.set("#crea-frame1, #crea-cap1", { opacity: 0 }, 2.35);
+    tl.set("#crea-frame2, #crea-cap2", { opacity: 1 }, 2.35);
+    tl.fromTo(
+      "#crea-frame2",
+      { clipPath: "inset(0 100% 0 0 round 16px)" },
+      { clipPath: "inset(0 0% 0 0 round 16px)", duration: 0.4, ease: "power3.inOut" },
+      2.35,
+    );
+    tl.to(
+      "#crea-heading, #crea-frame2, #crea-cap2",
+      { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in" },
+      4.25,
+    );
     window.__timelines["creations"] = tl;
   </script>
 </template>

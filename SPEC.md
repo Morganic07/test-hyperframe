@@ -32,7 +32,7 @@ SHOTS:
 - 7-9,7 s, accueil du site. MOMO STUDIO et « Casser la frontière entre ingénierie et design ».
 - 11-14,8 s, planète violette. Dev et code : Stars Comparison, filet.py, Dance Therapy.
 - 15,7-20,2 s, planète turquoise. Design et partenariats : Couture, Sac 3 en 1 ; Scénographie, ReYou.
-- 21,2-25,7 s, planète orange. Créations visuelles et 3D : A Space Odyssey plein cadre, puis Morgaris.
+- 21,2-25,7 s, planète orange. Créations visuelles et 3D : A Space Odyssey, puis Morgaris, en cadre à gauche.
 - 25,7-29,1 s, voyage. « L'empathie du design, la structure de l'ingénierie. »
 - 29,2-33 s, planète rouge. « Mettre cette double exigence au service de » puis « l'aérospatial ».
 - 33,3-37,6 s, horizon rouge. Photo, MORGANE PINA, rôle, momostudio.me, e-mail. Tenue jusqu'à la fin.

@@ -1,0 +1,108 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Space Grotesk";
+      src: url("assets/fonts/SpaceGrotesk-var-latin.woff2") format("woff2");
+      font-weight: 300 700;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+    }
+    #fin-photo {
+      position: absolute;
+      left: 110px;
+      top: 110px;
+      width: 260px;
+      height: 260px;
+      border: 3px solid #ff2a2a;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    #fin-name {
+      position: absolute;
+      left: 420px;
+      top: 110px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 120px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: #ffffff;
+    }
+    #fin-role {
+      position: absolute;
+      left: 426px;
+      top: 248px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 32px;
+      line-height: 1.35;
+      letter-spacing: 0.04em;
+      color: #ff2a2a;
+    }
+    #fin-role-l1,
+    #fin-role-l2 {
+      display: block;
+    }
+    #fin-site {
+      position: absolute;
+      left: 426px;
+      top: 380px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 64px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+    #fin-mail {
+      position: absolute;
+      left: 426px;
+      top: 466px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 34px;
+      color: #d1d5db;
+    }
+  </style>
+  <div data-hf-id="hf-wro4" id="root" data-composition-id="fin" data-width="1920" data-height="1080">
+    <img data-hf-id="hf-l8r5" id="fin-photo" src="assets/projets/photoprofil.webp" alt="Morgane Pina" />
+    <h1 data-hf-id="hf-zezt" id="fin-name">MORGANE PINA</h1>
+    <p data-hf-id="hf-emt4" id="fin-role"><span data-hf-id="hf-wjkv" id="fin-role-l1">ÉTUDIANTE EN INGÉNIERIE</span><span data-hf-id="hf-xc9l" id="fin-role-l2">INFORMATIQUE ET EN DESIGN</span></p>
+    <p data-hf-id="hf-43p9" id="fin-site">momostudio.me</p>
+    <p data-hf-id="hf-k9zm" id="fin-mail">morgane.pina1@gmail.com</p>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo(
+      "#fin-photo",
+      { opacity: 0, scale: 0.86 },
+      { opacity: 1, scale: 1, duration: 0.6, ease: "expo.out" },
+      0.05,
+    );
+    tl.fromTo(
+      "#fin-name",
+      { opacity: 0, filter: "blur(10px)" },
+      { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out" },
+      0.2,
+    );
+    tl.fromTo(
+      "#fin-role",
+      { clipPath: "inset(0 100% 0 0)" },
+      { clipPath: "inset(0 0% 0 0)", duration: 0.4, ease: "steps(25)" },
+      0.4,
+    );
+    tl.fromTo(
+      "#fin-site",
+      { opacity: 0, filter: "blur(8px)" },
+      { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" },
+      0.8,
+    );
+    tl.fromTo(
+      "#fin-mail",
+      { clipPath: "inset(0 100% 0 0)" },
+      { clipPath: "inset(0 0% 0 0)", duration: 0.3, ease: "steps(23)" },
+      1.0,
+    );
+    window.__timelines["fin"] = tl;
+  </script>
+</template>
