@@ -1,0 +1,108 @@
+{
+  "summary": {
+    "webAnimations": 2,
+    "cssDeclarations": 14,
+    "scrollTargets": 0,
+    "cdpAnimations": 8,
+    "canvases": 1
+  },
+  "namedAnimations": [
+    "bounce",
+    "pulse"
+  ],
+  "scrollTriggeredElements": 0,
+  "representativeAnimations": [
+    {
+      "type": "CSSAnimation",
+      "playState": "running",
+      "animationName": "bounce",
+      "targetSelector": "div.mt-16.flex.flex-col",
+      "targetRect": {
+        "x": 840.7677001953125,
+        "y": 537.7432861328125,
+        "width": 164,
+        "height": 88,
+        "top": 537.7432861328125,
+        "right": 1004.7677001953125,
+        "bottom": 625.7432861328125,
+        "left": 840.7677001953125
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.8, 0, 1, 1)",
+          "composite": "auto",
+          "transform": "translateY(-25%)",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.5,
+          "easing": "cubic-bezier(0, 0, 0.2, 1)",
+          "composite": "auto",
+          "transform": "none",
+          "computedOffset": 0.5
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.8, 0, 1, 1)",
+          "composite": "auto",
+          "transform": "translateY(-25%)",
+          "computedOffset": 1
+        }
+      ],
+      "timing": {
+        "duration": 1000,
+        "delay": 0,
+        "iterations": null,
+        "easing": "linear",
+        "direction": "normal"
+      }
+    },
+    {
+      "type": "CSSAnimation",
+      "playState": "running",
+      "animationName": "pulse",
+      "targetSelector": "span.w-2.h-2.rounded-full",
+      "targetRect": {
+        "x": 1736.796875,
+        "y": 994,
+        "width": 8,
+        "height": 8,
+        "top": 994,
+        "right": 1744.796875,
+        "bottom": 1002,
+        "left": 1736.796875
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.4, 0, 0.6, 1)",
+          "composite": "replace",
+          "opacity": "1",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.5,
+          "easing": "cubic-bezier(0.4, 0, 0.6, 1)",
+          "composite": "auto",
+          "opacity": "0.5",
+          "computedOffset": 0.5
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.4, 0, 0.6, 1)",
+          "composite": "replace",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ],
+      "timing": {
+        "duration": 2000,
+        "delay": 0,
+        "iterations": null,
+        "easing": "linear",
+        "direction": "normal"
+      }
+    }
+  ]
+}

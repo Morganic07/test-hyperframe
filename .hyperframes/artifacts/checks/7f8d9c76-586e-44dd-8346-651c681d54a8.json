@@ -1,0 +1,224 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 9
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 37.6,
+    "samples": [
+      2.089,
+      6.267,
+      10.444,
+      14.622,
+      18.8,
+      22.978,
+      27.156,
+      31.333,
+      35.511
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      2.089,
+      10.444,
+      18.8,
+      27.156,
+      35.511
+    ],
+    "checked": 14,
+    "passed": 14
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 6,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "film_silent",
+        "severity": "warning",
+        "message": "This 38 s film has no sound source (no <audio>, no <video> with sound): add a music bed and sounds on the visible actions unless the person asked for silence; see references/sound.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"HTML/CSS, Blender, Sketchfab\" (4 words) is on screen 1.20 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "HTML/CSS, Blender, Sketchfab",
+        "selector": "#dev-cap1 > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/dev.html",
+        "bbox": {
+          "x": 96,
+          "y": 762,
+          "width": 504,
+          "height": 40
+        },
+        "time": 11.204,
+        "words": 4,
+        "seconds": 1.202,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Simulation physique en Python\" (4 words) is on screen 1.10 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Simulation physique en Python",
+        "selector": "#dev-cap2 > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/dev.html",
+        "bbox": {
+          "x": 96,
+          "y": 762,
+          "width": 522,
+          "height": 40
+        },
+        "time": 12.406,
+        "words": 4,
+        "seconds": 1.101,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Site vitrine et design graphique\" (5 words) is on screen 1.23 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Site vitrine et design graphique",
+        "selector": "#dev-cap3 > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/dev.html",
+        "bbox": {
+          "x": 96,
+          "y": 762,
+          "width": 576,
+          "height": 40
+        },
+        "time": 13.507,
+        "words": 5,
+        "seconds": 1.233,
+        "floorSeconds": 1.5
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Un espace de coworking et de détente sur un salon profess...\" (11 words) is on screen 2.06 s (±0.01 s), under its 2.85 s floor: hold it about 0.5 s + 0.3 s a word (3.80 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Un espace de coworking et de détente sur un salon professionnel",
+        "selector": "#part-cap2 > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/partenariats.html",
+        "bbox": {
+          "x": 96,
+          "y": 705,
+          "width": 648,
+          "height": 79
+        },
+        "time": 18.074,
+        "words": 11,
+        "seconds": 2.061,
+        "floorSeconds": 2.85
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"A Space Odyssey, animation 3D sur Blender\" (7 words) is on screen 1.60 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+        "text": "A Space Odyssey, animation 3D sur Blender",
+        "selector": "#crea-full1 > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/creations.html",
+        "bbox": {
+          "x": 127,
+          "y": 927,
+          "width": 984,
+          "height": 53
+        },
+        "time": 22.469,
+        "words": 7,
+        "seconds": 1.601,
+        "floorSeconds": 1.95
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 301
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "audio_none",
+        "severity": "info",
+        "message": "The film has no sound: no clip in it plays audio.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "typography": [
+    {
+      "role": "display",
+      "fontFamily": "Space Grotesk",
+      "fontSize": "96px",
+      "fontWeight": "700",
+      "lineHeight": "96px",
+      "letterSpacing": "-4.8px",
+      "color": "#FFFFFF",
+      "sampleText": "MOMO STUDIO"
+    },
+    {
+      "role": "body",
+      "fontFamily": "JetBrains Mono",
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "lineHeight": "28px",
+      "letterSpacing": "5.4px",
+      "color": "oklch(0.872 0.01 258.338)",
+      "sampleText": "Casser la frontière entre ingénieurie et design"
+    },
+    {
+      "role": "code",
+      "fontFamily": "JetBrains Mono",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "lineHeight": "16px",
+      "letterSpacing": "1.2px",
+      "color": "#FF2A2A",
+      "sampleText": "Scroll pour explorer"
+    }
+  ],
+  "spacing": {
+    "observed": [
+      8,
+      12,
+      16,
+      48
+    ],
+    "baseUnit": 8
+  },
+  "radius": [],
+  "shadows": [
+    {
+      "value": "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px",
+      "count": 4
+    },
+    {
+      "value": "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+      "count": 1
+    }
+  ],
+  "buttons": [
+    {
+      "label": "Qui suis-je",
+      "background": "#060010",
+      "backgroundImage": "",
+      "backdropFilter": "blur(10px)",
+      "color": "#FFFFFF",
+      "padding": "0px 24px",
+      "borderRadius": "16px",
+      "border": "1px solid rgba(255, 42, 42, 0.2)",
+      "boxShadow": "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "height": "68px"
+    }
+  ],
+  "cards": [],
+  "nav": null,
+  "chips": [],
+  "statCells": [],
+  "tabs": [],
+  "backgrounds": [],
+  "glass": [
+    {
+      "backdropFilter": "blur(10px)",
+      "background": "rgba(6, 0, 16, 0.8)",
+      "border": "1px solid rgba(255, 42, 42, 0.2)",
+      "borderRadius": "16px",
+      "boxShadow": "",
+      "area": 18088
+    }
+  ]
+}

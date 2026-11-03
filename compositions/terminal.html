@@ -1,0 +1,150 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      font-family: "JetBrains Mono", monospace;
+      color: #ffffff;
+    }
+    #term-ground {
+      position: absolute;
+      inset: 0;
+      background: #050505;
+    }
+    #term-mission {
+      position: absolute;
+      left: 140px;
+      top: 150px;
+      font-size: 92px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    #term-check {
+      position: absolute;
+      left: 140px;
+      top: 290px;
+      font-size: 40px;
+      letter-spacing: 0.12em;
+      color: #d1d5db;
+    }
+    .term-row {
+      position: absolute;
+      left: 140px;
+      width: 1640px;
+      display: flex;
+      align-items: baseline;
+      font-size: 44px;
+    }
+    .term-name {
+      flex: none;
+      width: 380px;
+      font-weight: 500;
+    }
+    .term-tools {
+      flex: 1;
+      color: #d1d5db;
+    }
+    .term-go {
+      flex: none;
+      font-size: 72px;
+      font-weight: 500;
+      color: #ff2a2a;
+    }
+    #term-row1 {
+      top: 430px;
+    }
+    #term-row2 {
+      top: 560px;
+    }
+    #term-row3 {
+      top: 690px;
+    }
+    #term-launch {
+      position: absolute;
+      left: 140px;
+      top: 860px;
+      font-size: 72px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    #term-cursor {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 44px;
+      height: 76px;
+      background: #ffffff;
+    }
+  </style>
+  <div data-hf-id="hf-nnj7" id="root" data-composition-id="terminal" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-ulz5" id="term-ground"></div>
+    <div data-hf-id="hf-oa6x" id="term-mission">MISSION : MORGANE PINA</div>
+    <div data-hf-id="hf-cl5h" id="term-check">VÉRIFICATION DES SYSTÈMES</div>
+    <div data-hf-id="hf-bgin" id="term-row1" class="term-row">
+      <span data-hf-id="hf-fmm6" class="term-name">BACK-END</span>
+      <span data-hf-id="hf-b6zy" id="term-tools1" class="term-tools">Python · C++ · Java · SQL</span>
+      <span data-hf-id="hf-foiw" id="term-go1" class="term-go">GO</span>
+    </div>
+    <div data-hf-id="hf-2sms" id="term-row2" class="term-row">
+      <span data-hf-id="hf-mewg" class="term-name">FRONT-END</span>
+      <span data-hf-id="hf-zdok" id="term-tools2" class="term-tools">HTML/CSS · JavaScript · Framer</span>
+      <span data-hf-id="hf-e3xr" id="term-go2" class="term-go">GO</span>
+    </div>
+    <div data-hf-id="hf-3kal" id="term-row3" class="term-row">
+      <span data-hf-id="hf-g0wr" class="term-name">DESIGN</span>
+      <span data-hf-id="hf-xo5j" id="term-tools3" class="term-tools">Blender · Illustrator · FontLab</span>
+      <span data-hf-id="hf-kd3i" id="term-go3" class="term-go">GO</span>
+    </div>
+    <div data-hf-id="hf-mwak" id="term-launch">LANCEMENT</div>
+    <div data-hf-id="hf-q8mm" id="term-cursor"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const type = (selector, at, duration, steps) =>
+      tl.fromTo(
+        selector,
+        { clipPath: "inset(0 100% 0 0)" },
+        { clipPath: "inset(0 0% 0 0)", duration, ease: `steps(${steps})` },
+        at,
+      );
+
+    gsap.set("#term-cursor", { x: 1400, y: 160 });
+    type("#term-check", 0.25, 0.55, 25);
+
+    [
+      ["#term-row1", "#term-go1", 1.0],
+      ["#term-row2", "#term-go2", 2.15],
+      ["#term-row3", "#term-go3", 3.3],
+    ].forEach(([row, go, at]) => {
+      type(row, at, 0.6, 30);
+      tl.set(go, { opacity: 0 }, 0);
+      tl.set(go, { opacity: 1 }, at + 0.85);
+    });
+
+    type("#term-launch", 4.55, 0.4, 9);
+
+    tl.set("#term-cursor", { x: 660, y: 866 }, 4.95);
+    tl.to(
+      "#term-mission, #term-check, .term-row, #term-launch",
+      { opacity: 0, filter: "blur(8px)", duration: 0.25, ease: "power2.in" },
+      5.75,
+    );
+    tl.to(
+      "#term-cursor",
+      {
+        x: 948,
+        y: 640,
+        width: 24,
+        height: 24,
+        borderRadius: 12,
+        boxShadow: "0 0 40px 14px rgba(255,255,255,0.55)",
+        duration: 0.7,
+        ease: "power3.inOut",
+      },
+      5.85,
+    );
+    tl.to("#term-ground", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 6.6);
+    tl.to("#term-cursor", { opacity: 0, duration: 0.2, ease: "none" }, 6.95);
+    window.__timelines["terminal"] = tl;
+  </script>
+</template>
